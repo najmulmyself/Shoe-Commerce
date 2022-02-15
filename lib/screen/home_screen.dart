@@ -16,36 +16,47 @@ class HomeScreen extends StatelessWidget {
             // SizedBox(
             //   height: 40,
             // ),
-            Container(
-              height: 200,
-              width: double.infinity,
-              // color: Colors.red,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(child: Text("Featured")),
-                  Row(
-                    children: [
-                      Expanded(
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(child: Text("Featured")),
+                Container(
+                  child: Row(children: [
+                    Container(
+                      width: double.infinity,
+                      height: 300,
+                      child: Expanded(
                         child: ListView.builder(
-                            itemCount: 6,
-                            itemBuilder: (context, index) {
-                              return Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Row(children: [
-                                  Container(
-                                    height: 80,
-                                    width: 40,
-                                    color: Colors.black,
-                                  ),
-                                ]),
-                              );
-                            }),
+                          itemBuilder: (con, index) {
+                            return Icon(Icons.abc);
+                          },
+                          itemCount: 6,
+                        ),
                       ),
-                    ],
-                  )
-                ],
-              ),
+                    )
+                  ]),
+                ),
+                // Row(
+                //   children: [
+                //     Row(
+                //       children: [
+                //         ListView.builder(
+                //             itemCount: 6,
+                //             itemBuilder: (context, index) {
+                //               return Padding(
+                //                 padding: const EdgeInsets.all(8.0),
+                //                 child: Container(
+                //                   height: 80,
+                //                   width: 70,
+                //                   color: Colors.black,
+                //                 ),
+                //               );
+                //             }),
+                //       ],
+                //     ),
+                //   ],
+                // )
+              ],
             )
           ],
         ),
