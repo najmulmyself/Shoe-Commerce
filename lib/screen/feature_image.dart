@@ -22,7 +22,7 @@ class FeatureProduct extends StatelessWidget {
           height: 300,
           width: double.infinity,
           child: Padding(
-            padding: const EdgeInsets.all(38.0),
+            padding: const EdgeInsets.all(28.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,8 +58,8 @@ class FeatureProduct extends StatelessWidget {
               children: [
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.search,
-                      color: Theme.of(context).accentColor),
+                  icon:
+                      Icon(Icons.search, color: Theme.of(context).accentColor),
                 ),
                 IconButton(
                   onPressed: () {},

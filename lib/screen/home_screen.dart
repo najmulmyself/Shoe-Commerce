@@ -14,12 +14,23 @@ class HomeScreen extends StatelessWidget {
           children: [
             FeatureProduct(),
             SizedBox(
-              height: 20,
+              height: 15,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Featured"),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 18.0,
+                  ),
+                  child: Text(
+                    "Featured",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
                 Container(
                   height: 200,
                   child: ListView.builder(
@@ -27,11 +38,32 @@ class HomeScreen extends StatelessWidget {
                       itemCount: 26,
                       itemBuilder: (c, i) {
                         return Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(18.0),
                           child: Container(
                             height: 80,
                             width: 140,
-                            color: Colors.black,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.2),
+                                  blurRadius: 10,
+                                )
+                              ],
+                              color: Colors.white,
+                            ),
+                            child: Stack(
+                              children: [
+                                Text('\$ 109.99'),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 38.0),
+                                  child: Image(
+                                    image:
+                                        AssetImage('assets/images/shoe1.png'),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         );
                       }),
