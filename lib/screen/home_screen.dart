@@ -38,25 +38,46 @@ class HomeScreen extends StatelessWidget {
                       itemCount: 26,
                       itemBuilder: (c, i) {
                         return Padding(
-                          padding: const EdgeInsets.all(18.0),
+                          padding: const EdgeInsets.all(8.0),
                           child: Container(
-                            height: 80,
+                            color: Colors.red,
+                            height: 180,
                             width: 140,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black.withOpacity(0.2),
-                                  blurRadius: 10,
-                                )
-                              ],
-                              color: Colors.white,
-                            ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            // decoration: BoxDecoration(
+                            //   borderRadius: BorderRadius.circular(10),
+                            //   boxShadow: [
+                            //     BoxShadow(
+                            //       color: Colors.black.withOpacity(0.2),
+                            //       blurRadius: 10,
+                            //     ),
+                            //   ],
+                            //   color: Colors.white,
+                            // ),
+                            child: Stack(
+                              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Image(
-                                  image: AssetImage('assets/images/shoe1.png'),
+                                Align(
+                                  child: Container(
+                                    height: 200,
+                                    width: 120,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color:
+                                                Colors.black.withOpacity(0.2),
+                                            blurRadius: 10),
+                                      ],
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                                Align(
+                                  // alignment: Alignment.centerRight,
+                                  child: Image(
+                                    image:
+                                        AssetImage('assets/images/shoe1.png'),
+                                  ),
                                 ),
                                 Text('\$ 109.99'),
                               ],
