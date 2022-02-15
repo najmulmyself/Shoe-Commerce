@@ -52,16 +52,13 @@ class HomeScreen extends StatelessWidget {
                               ],
                               color: Colors.white,
                             ),
-                            child: Stack(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text('\$ 109.99'),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 38.0),
-                                  child: Image(
-                                    image:
-                                        AssetImage('assets/images/shoe1.png'),
-                                  ),
+                                Image(
+                                  image: AssetImage('assets/images/shoe1.png'),
                                 ),
+                                Text('\$ 109.99'),
                               ],
                             ),
                           ),
