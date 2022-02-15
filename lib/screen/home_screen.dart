@@ -11,6 +11,27 @@ class HomeScreen extends StatelessWidget {
       body: SafeArea(
         child: Stack(
           children: [
+            Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage('assets/images/shoe-intro.jpg'),
+                ),
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(40),
+                ),
+              ),
+              height: 300,
+              width: double.infinity,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("New Nike Series"),
+                  Text('JOYRIDE'),
+                ],
+              ),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -34,10 +55,6 @@ class HomeScreen extends StatelessWidget {
                 )
               ],
             ),
-            Container(
-              height: 200,
-              color: Colors.transparent,
-            )
           ],
         ),
       ),
