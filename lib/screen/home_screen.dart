@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoecommerce/screen/feature_image.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({
@@ -9,69 +10,43 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Stack(
+        child: Column(
           children: [
+            FeatureProduct(),
+            // SizedBox(
+            //   height: 40,
+            // ),
             Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/shoe-intro.jpg'),
-                ),
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(40),
-                ),
-              ),
-              height: 300,
+              height: 200,
               width: double.infinity,
-              child: Padding(
-                padding: const EdgeInsets.all(38.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "New Nike Series",
-                      style: TextStyle(
-                          fontSize: 20, color: Theme.of(context).accentColor),
-                    ),
-                    Text(
-                      'JOYRIDE',
-                      style: TextStyle(
-                          fontSize: 45,
-                          color: Theme.of(context).accentColor,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 5),
-                    ),
-                  ],
-                ),
+              // color: Colors.red,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(child: Text("Featured")),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: ListView.builder(
+                            itemCount: 6,
+                            itemBuilder: (context, index) {
+                              return Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(children: [
+                                  Container(
+                                    height: 80,
+                                    width: 40,
+                                    color: Colors.black,
+                                  ),
+                                ]),
+                              );
+                            }),
+                      ),
+                    ],
+                  )
+                ],
               ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.arrow_back,
-                    color: Theme.of(context).accentColor,
-                  ),
-                ),
-                Row(
-                  children: [
-                    IconButton(
-                      onPressed: () {},
-                      icon: Icon(Icons.search,
-                          color: Theme.of(context).accentColor),
-                    ),
-                    IconButton(
-                      onPressed: () {},
-                      icon: Icon(Icons.favorite_border,
-                          color: Theme.of(context).accentColor),
-                    ),
-                  ],
-                )
-              ],
-            ),
+            )
           ],
         ),
       ),
