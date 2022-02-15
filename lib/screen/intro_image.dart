@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class FeatureProduct extends StatelessWidget {
-  const FeatureProduct({
+class IntroProduct extends StatelessWidget {
+  const IntroProduct({
     Key? key,
   }) : super(key: key);
 
