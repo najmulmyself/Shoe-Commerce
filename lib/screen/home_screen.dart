@@ -23,13 +23,27 @@ class HomeScreen extends StatelessWidget {
               ),
               height: 300,
               width: double.infinity,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("New Nike Series"),
-                  Text('JOYRIDE'),
-                ],
+              child: Padding(
+                padding: const EdgeInsets.all(38.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "New Nike Series",
+                      style: TextStyle(
+                          fontSize: 20, color: Theme.of(context).accentColor),
+                    ),
+                    Text(
+                      'JOYRIDE',
+                      style: TextStyle(
+                          fontSize: 45,
+                          color: Theme.of(context).accentColor,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 5),
+                    ),
+                  ],
+                ),
               ),
             ),
             Row(
@@ -37,19 +51,22 @@ class HomeScreen extends StatelessWidget {
               children: [
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.arrow_back),
+                  icon: Icon(
+                    Icons.arrow_back,
+                    color: Theme.of(context).accentColor,
+                  ),
                 ),
                 Row(
                   children: [
                     IconButton(
                       onPressed: () {},
-                      icon: Icon(Icons.search),
+                      icon: Icon(Icons.search,
+                          color: Theme.of(context).accentColor),
                     ),
                     IconButton(
                       onPressed: () {},
-                      icon: Icon(
-                        Icons.favorite_border,
-                      ),
+                      icon: Icon(Icons.favorite_border,
+                          color: Theme.of(context).accentColor),
                     ),
                   ],
                 )
