@@ -11,7 +11,7 @@ class FeatureProduct extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Padding(
-          padding: const EdgeInsets.only(
+          padding: EdgeInsets.only(
             left: 18.0,
           ),
           child: Text(
@@ -54,13 +54,13 @@ class FeatureProduct extends StatelessWidget {
                             color: Colors.white,
                           ),
                         ),
-                        Image(
+                        const Image(
                           image: AssetImage('assets/images/shoe1.png'),
                         ),
-                        Align(
+                        const Align(
                           alignment: Alignment.bottomCenter,
                           child: Padding(
-                            padding: const EdgeInsets.only(
+                            padding: EdgeInsets.only(
                                 bottom: 8.0, right: 17),
                             child: Text(
                               '\$ 109.99',

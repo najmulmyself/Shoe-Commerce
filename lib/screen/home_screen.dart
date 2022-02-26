@@ -17,7 +17,27 @@ class HomeScreen extends StatelessWidget {
             SizedBox(
               height: 15,
             ),
-            FeatureProduct()
+            FeatureProduct(),
+            SizedBox(
+              height: 15,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(
+                    left: 18.0,
+                  ),
+                  child: Text(
+                    "Discover",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
