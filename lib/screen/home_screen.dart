@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:shoecommerce/screen/feature_product.dart';
 import 'package:shoecommerce/screen/intro_image.dart';
 
+import 'discover_product.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({
     Key? key,
@@ -12,7 +14,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Column(
-          children: [
+          children: const [
             IntroProduct(),
             SizedBox(
               height: 15,
@@ -21,23 +23,7 @@ class HomeScreen extends StatelessWidget {
             SizedBox(
               height: 15,
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(
-                    left: 18.0,
-                  ),
-                  child: Text(
-                    "Discover",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ],
-            ),
+            DiscoverProduct(),
           ],
         ),
       ),
