@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoecommerce/screen/discover_product.dart';
 
 class FeatureProduct extends StatelessWidget {
   const FeatureProduct({
@@ -60,13 +61,11 @@ class FeatureProduct extends StatelessWidget {
                         const Align(
                           alignment: Alignment.bottomCenter,
                           child: Padding(
-                            padding: EdgeInsets.only(
-                                bottom: 8.0, right: 17),
+                            padding: EdgeInsets.only(bottom: 8.0, right: 17),
                             child: Text(
                               '\$ 109.99',
                               style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold),
+                                  fontSize: 18, fontWeight: FontWeight.bold),
                             ),
                           ),
                         ),
@@ -75,7 +74,7 @@ class FeatureProduct extends StatelessWidget {
                   ),
                 );
               }),
-        )
+        ),
       ],
     );
   }

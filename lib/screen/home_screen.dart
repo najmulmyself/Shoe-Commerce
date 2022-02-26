@@ -14,7 +14,8 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Column(
-          children: const [
+          verticalDirection: VerticalDirection.down,
+          children: [
             IntroProduct(),
             SizedBox(
               height: 15,
