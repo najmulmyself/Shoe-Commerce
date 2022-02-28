@@ -39,8 +39,21 @@ class DiscoverProduct extends StatelessWidget {
                     image: DecorationImage(
                       image: AssetImage('assets/images/shoe2.jpg'),
                       colorFilter: ColorFilter.mode(
-                          Colors.black.withOpacity(.6), BlendMode.dstATop),
+                          Colors.blueAccent.withOpacity(0.2), BlendMode.color),
                       fit: BoxFit.cover,
+                    ),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Align(
+                      alignment: Alignment.bottomLeft,
+                      child: Text(
+                        'New Sneaker Trends',
+                        style: TextStyle(
+                          fontSize: 22,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                   ),
                 ),
