@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:shoecommerce/screen/sneaker_screen.dart';
 import 'package:shoecommerce/screen/feature_product.dart';
 import 'package:shoecommerce/screen/intro_image.dart';
+import 'package:shoecommerce/screen/sneaker_screen.dart';
 
 import 'discover_product.dart';
+// import 'sneaker.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({
@@ -29,35 +32,43 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        items: [
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              "assets/images/shoeicon.png",
-              height: 30,
-              width: double.infinity,
-            ),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/images/bicon2.png',
-              height: 25,
-              color: Colors.purple,
-            ),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/images/user.png',
-              height: 25,
-            ),
-            label: '',
-          ),
-        ],
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   showSelectedLabels: false,
+      //   showUnselectedLabels: false,
+      //   items: [
+      //     BottomNavigationBarItem(
+      //       icon: InkWell(
+      //         onTap: () => Navigator.push(
+      //           context,
+      //           MaterialPageRoute(
+      //             builder: (context) => HomeScreen(),
+      //           ),
+      //         ),
+      //         child: Image.asset(
+      //           "assets/images/shoeicon.png",
+      //           height: 30,
+      //           width: double.infinity,
+      //         ),
+      //       ),
+      //       label: '',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Image.asset(
+      //         'assets/images/bicon2.png',
+      //         height: 25,
+      //         color: Colors.purple,
+      //       ),
+      //       label: '',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Image.asset(
+      //         'assets/images/user.png',
+      //         height: 25,
+      //       ),
+      //       label: '',
+      //     ),
+      //   ],
+      // ),
     );
   }
 }
