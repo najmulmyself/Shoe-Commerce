@@ -25,7 +25,7 @@ class DiscoverProduct extends StatelessWidget {
         Container(
           height: 140,
           width: double.infinity,
-          color: Colors.grey,
+          // color: Colors.grey,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemBuilder: (c, i) {
@@ -33,7 +33,14 @@ class DiscoverProduct extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
                   width: 240,
-                  color: Colors.red,
+                  decoration: BoxDecoration(
+                    // color: Colors.red,
+                    borderRadius: BorderRadius.circular(20),
+                    image: DecorationImage(
+                      image: AssetImage('assets/images/shoe2.jpg'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ),
               );
             },
