@@ -8,9 +8,9 @@ class SearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 5),
+      padding: const EdgeInsets.symmetric(horizontal: 2.0, vertical: 14),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Icon(Icons.notes_rounded),
           Container(
@@ -18,7 +18,7 @@ class SearchBar extends StatelessWidget {
               borderRadius: BorderRadius.circular(30),
               color: Colors.grey.withOpacity(0.2),
             ),
-            width: 300,
+            width: 250,
             child: TextField(
               showCursor: false,
               decoration: InputDecoration(
