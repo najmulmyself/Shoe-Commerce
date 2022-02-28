@@ -34,9 +34,12 @@ class DiscoverProduct extends StatelessWidget {
                   margin: EdgeInsets.only(left: 8),
                   width: 240,
                   decoration: BoxDecoration(
+                    // color: Color.fromRGBO(0, 0, 1, .4),
                     borderRadius: BorderRadius.circular(20),
                     image: DecorationImage(
                       image: AssetImage('assets/images/shoe2.jpg'),
+                      colorFilter: ColorFilter.mode(
+                          Colors.black.withOpacity(.6), BlendMode.dstATop),
                       fit: BoxFit.cover,
                     ),
                   ),
