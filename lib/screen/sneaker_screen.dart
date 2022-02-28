@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoecommerce/screen/search_bar.dart';
 
 class Sneaker extends StatelessWidget {
   const Sneaker({Key? key}) : super(key: key);
@@ -7,12 +8,10 @@ class Sneaker extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.red,
+        // backgroundColor: Colors.red,
         body: Column(
           children: [
-            Row(
-              children: [Icon(Icons.ac_unit)],
-            ),
+            SearchBar(),
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
