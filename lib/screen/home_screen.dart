@@ -32,43 +32,43 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   showSelectedLabels: false,
-      //   showUnselectedLabels: false,
-      //   items: [
-      //     BottomNavigationBarItem(
-      //       icon: InkWell(
-      //         onTap: () => Navigator.push(
-      //           context,
-      //           MaterialPageRoute(
-      //             builder: (context) => HomeScreen(),
-      //           ),
-      //         ),
-      //         child: Image.asset(
-      //           "assets/images/shoeicon.png",
-      //           height: 30,
-      //           width: double.infinity,
-      //         ),
-      //       ),
-      //       label: '',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Image.asset(
-      //         'assets/images/bicon2.png',
-      //         height: 25,
-      //         color: Colors.purple,
-      //       ),
-      //       label: '',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Image.asset(
-      //         'assets/images/user.png',
-      //         height: 25,
-      //       ),
-      //       label: '',
-      //     ),
-      //   ],
-      // ),
+      bottomNavigationBar: BottomNavigationBar(
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        items: [
+          BottomNavigationBarItem(
+            icon: InkWell(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Sneaker(),
+                ),
+              ),
+              child: Image.asset(
+                "assets/images/shoeicon.png",
+                height: 30,
+                width: double.infinity,
+              ),
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset(
+              'assets/images/bicon2.png',
+              height: 25,
+              color: Colors.purple,
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset(
+              'assets/images/user.png',
+              height: 25,
+            ),
+            label: '',
+          ),
+        ],
+      ),
     );
   }
 }
