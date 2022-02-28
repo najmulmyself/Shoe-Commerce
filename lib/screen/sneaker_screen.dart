@@ -2,16 +2,69 @@ import 'package:flutter/material.dart';
 import 'package:shoecommerce/screen/search_bar.dart';
 
 class Sneaker extends StatelessWidget {
-  const Sneaker({Key? key}) : super(key: key);
-
   @override
+  List brands = [
+    'Nike',
+    'Adidas',
+    'Puma',
+    'Humel',
+    'Reebok',
+    'Birkenstock',
+    'Dolce Vita',
+    'Fireside',
+    'Hurley',
+    'Ladeda',
+    'Madden Girl',
+    'Rockport',
+  ];
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         // backgroundColor: Colors.red,
         body: Column(
+          // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SearchBar(),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding:
+                      const EdgeInsets.only(left: 18.0, top: 18, bottom: 12),
+                  child: Text(
+                    'Sneakers',
+                    style: TextStyle(
+                      fontSize: 30,
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 30,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      return Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 18.0),
+                            child: Text(
+                              brands[index],
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ),
+                        ],
+                      );
+                    },
+                    itemCount: brands.length,
+                  ),
+                )
+              ],
+            ),
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
