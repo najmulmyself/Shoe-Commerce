@@ -12,26 +12,39 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: [
-            IntroProduct(),
-            SizedBox(
-              height: 15,
-            ),
-            FeatureProduct(),
-            SizedBox(
-              height: 15,
-            ),
-            DiscoverProduct(),
-          ],
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Column(
+            children: [
+              IntroProduct(),
+              SizedBox(
+                height: 15,
+              ),
+              FeatureProduct(),
+              SizedBox(
+                height: 15,
+              ),
+              DiscoverProduct(),
+            ],
+          ),
         ),
       ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   items: [
-      //     BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
-      //   ],
-      // ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.add),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.place),
+            label: 'Home',
+          ),
+        ],
+      ),
     );
   }
 }

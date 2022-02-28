@@ -25,16 +25,15 @@ class DiscoverProduct extends StatelessWidget {
         Container(
           height: 140,
           width: double.infinity,
-          // color: Colors.grey,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemBuilder: (c, i) {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
+                  margin: EdgeInsets.only(left: 8),
                   width: 240,
                   decoration: BoxDecoration(
-                    // color: Colors.red,
                     borderRadius: BorderRadius.circular(20),
                     image: DecorationImage(
                       image: AssetImage('assets/images/shoe2.jpg'),
