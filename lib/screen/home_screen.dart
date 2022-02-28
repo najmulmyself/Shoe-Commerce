@@ -30,18 +30,31 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: Image.asset(
+              "assets/images/shoeicon.png",
+              height: 30,
+              width: double.infinity,
+            ),
+            label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.add),
-            label: 'Home',
+            icon: Image.asset(
+              'assets/images/bicon2.png',
+              height: 25,
+              color: Colors.purple,
+            ),
+            label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.place),
-            label: 'Home',
+            icon: Image.asset(
+              'assets/images/user.png',
+              height: 25,
+            ),
+            label: '',
           ),
         ],
       ),
