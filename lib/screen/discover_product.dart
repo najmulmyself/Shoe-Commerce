@@ -7,35 +7,40 @@ class DiscoverProduct extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.only(
-              left: 18.0,
-            ),
-            child: Text(
-              "Discover",
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Padding(
+          padding: EdgeInsets.only(
+            left: 18.0,
+          ),
+          child: Text(
+            "Discover",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
             ),
           ),
-          Container(
-            child: ListView.builder(
-              itemBuilder: (c, i) {
-                return Container(
-                  height: 40,
-                  width: 40,
+        ),
+        Container(
+          height: 140,
+          width: double.infinity,
+          color: Colors.grey,
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (c, i) {
+              return Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: 240,
                   color: Colors.red,
-                );
-              },
-              itemCount: 20,
-            ),
-          )
-        ],
-      ),
+                ),
+              );
+            },
+            itemCount: 20,
+          ),
+        )
+      ],
     );
   }
 }

@@ -14,7 +14,6 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Column(
-          verticalDirection: VerticalDirection.down,
           children: [
             IntroProduct(),
             SizedBox(
@@ -28,6 +27,11 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   items: [
+      //     BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
+      //   ],
+      // ),
     );
   }
 }
